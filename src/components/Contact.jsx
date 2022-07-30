@@ -2,9 +2,8 @@ import React, { useRef, useState } from "react";
 import MovingText from "react-moving-text";
 import emailjs from "@emailjs/browser";
 import contact from "../assets/contact.svg";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Loader from "./Loader";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -25,21 +24,18 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           setLoading(false);
-          toast.success("Email envoyé avec succès", {
-            position: toast.POSITION.BOTTOM_CENTER,
-          });
+          toast.success("Email envoyé avec succès");
         },
         (error) => {
           console.log(error.text);
-          toast.error("Ouup, email non envoyé", {
-            position: toast.POSITION.BOTTOM_CENTER,
-          });
+          toast.error("Ouup, email non envoyé");
         }
       );
   };
 
   return (
     <div id="contact" className="px-8 py-24 text-white">
+      <Toaster position="bottom-center" />
       <MovingText
         type="bounce"
         duration="1500ms"
@@ -50,7 +46,6 @@ const Contact = () => {
       >
         <h2 className="text-xl text-center my-5">Contact</h2>
       </MovingText>
-      <ToastContainer />;
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex-1">
           <img id="image" className="h-96 md:mb-10" src={contact} alt="" />
