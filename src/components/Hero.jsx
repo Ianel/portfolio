@@ -10,7 +10,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const Hero = () => {
+export const Hero = () => {
   const settings = {
     canvas: {
       canvasFillSpace: true,
@@ -126,5 +126,3 @@ const Hero = () => {
     </div>
   );
 };
-
-export default Hero;

@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import MovingText from "react-moving-text";
 import emailjs from "@emailjs/browser";
-import contact from "../assets/contact.svg";
-import Loader from "./Loader";
+import contactImg from "../assets/contact.svg";
+import { Loader } from "./Loader";
 import toast, { Toaster } from "react-hot-toast";
 
-const Contact = () => {
+export const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -48,7 +48,7 @@ const Contact = () => {
       </MovingText>
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex-1">
-          <img id="image" className="h-96 md:mb-10" src={contact} alt="" />
+          <img id="image" className="h-96 md:mb-10" src={contactImg} alt="" />
         </div>
         <div className="flex-1">
           <form
@@ -139,5 +139,3 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;

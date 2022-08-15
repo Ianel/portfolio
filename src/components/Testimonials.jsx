@@ -3,7 +3,7 @@ import MovingText from "react-moving-text";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import marielle from "../assets/Marielle.jpg";
 
-const Testimonials = () => {
+export const Testimonials = () => {
   return (
     <div id="testimonial" className="bg-secondary px-8 py-24 text-white">
       <MovingText
@@ -74,5 +74,3 @@ const Testimonials = () => {
     </div>
   );
 };
-
-export default Testimonials;

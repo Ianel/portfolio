@@ -9,7 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="bg-secondary py-10 text-white">
       <MovingText
@@ -69,5 +69,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

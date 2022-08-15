@@ -1,7 +1,7 @@
 import React from "react";
 import MovingText from "react-moving-text";
 
-const About = () => {
+export const About = () => {
   return (
     <div id="about" className="flex flex-col items-center text-white">
       <div className="flex-1 flex justify-center">
@@ -51,5 +51,3 @@ const About = () => {
     </div>
   );
 };
-
-export default About;

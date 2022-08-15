@@ -2,7 +2,7 @@ import React from "react";
 import MovingText from "react-moving-text";
 import { FaCogs, FaMobile } from "react-icons/fa";
 
-const Services = () => {
+export const Services = () => {
   return (
     <div id="services" className="pt-12 pb-20 text-white">
       <MovingText
@@ -49,5 +49,3 @@ const Services = () => {
     </div>
   );
 };
-
-export default Services;

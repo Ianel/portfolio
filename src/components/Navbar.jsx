@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [show, setShow] = useState(false);
 
   return (
@@ -63,5 +63,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

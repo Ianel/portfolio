@@ -5,7 +5,7 @@ import doctor from "../assets/doctor-app.png";
 import bfa from "../assets/bfa.png";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <div id="projects" className="bg-secondary pt-10 pb-24 text-white">
       <MovingText
@@ -119,5 +119,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;
