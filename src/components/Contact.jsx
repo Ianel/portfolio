@@ -3,7 +3,7 @@ import MovingText from "react-moving-text";
 import emailjs from "@emailjs/browser";
 import contactImg from "../assets/contact.svg";
 import { Loader } from "./Loader";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export const Contact = () => {
   const form = useRef();
@@ -22,12 +22,12 @@ export const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          //console.log(result.text);
           setLoading(false);
           toast.success("Email envoyé avec succès");
         },
         (error) => {
-          console.log(error.text);
+          //console.log(error.text);
           toast.error("Ouup, email non envoyé");
         }
       );
@@ -35,7 +35,6 @@ export const Contact = () => {
 
   return (
     <div id="contact" className="px-8 py-24 text-white">
-      <Toaster position="bottom-center" />
       <MovingText
         type="bounce"
         duration="1500ms"

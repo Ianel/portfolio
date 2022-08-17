@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 import ScrollReveal from "scrollreveal";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="bg-primary font-body text-sm">
+      <Toaster />
       <Navbar />
       <Hero />
       <Services />
